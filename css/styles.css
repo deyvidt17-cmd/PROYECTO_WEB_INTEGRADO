@@ -1,0 +1,880 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    height: 76px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 21px;
+}
+
+.brand-title {
+    display: block;
+
+    font-weight: 800;
+    font-size: 16px;
+
+    color: #111827;
+}
+
+.brand-subtitle {
+    display: block;
+
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.system-status {
+    font-size: 12px;
+    color: #6b7280;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.user-button {
+    font-size: 24px;
+    color: #374151;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.hub-header {
+    padding: 20px 5px;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.hub-header h1 {
+    font-size: 34px;
+    font-weight: 800;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.hub-header p {
+    max-width: 720px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.custom-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.card-header-custom h5 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.card-header-custom p {
+    margin: 3px 0 0;
+
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.simulator-icon {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.evidence-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.card-body-custom {
+    padding: 20px;
+}
+
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+.form-label {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #374151;
+
+    margin-bottom: 7px;
+}
+
+.custom-input {
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.custom-input .input-group-text {
+    background: #f9fafb;
+    border: none;
+
+    color: #9ca3af;
+}
+
+.custom-input .form-control {
+    border: none;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.custom-input:focus-within {
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.custom-select {
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    font-size: 13px;
+
+    padding: 11px;
+
+    box-shadow: none;
+}
+
+.custom-select:focus {
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-generate {
+    background: #111827;
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 11px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-generate:hover {
+    background: #1f2937;
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+.btn-simulate {
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 11px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-simulate:hover {
+    background: #4338ca;
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   DROPZONE
+========================= */
+
+.dropzone {
+    border: 2px dashed #d1d5db;
+
+    border-radius: 14px;
+
+    padding: 28px 15px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.dropzone:hover,
+.dropzone.dragover {
+    border-color: #6366f1;
+
+    background: #f8f8ff;
+}
+
+.dropzone i {
+    font-size: 30px;
+
+    color: #6366f1;
+}
+
+.dropzone h6 {
+    margin-top: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dropzone p {
+    font-size: 11px;
+
+    color: #9ca3af;
+
+    margin: 0;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.evidence-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.evidence-item {
+    position: relative;
+
+    height: 80px;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+}
+
+.evidence-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    width: 22px;
+    height: 22px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   CONTRATO
+========================= */
+
+.contract-header {
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.section-label {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #9ca3af;
+}
+
+.contract-header h3 {
+    margin: 5px 0 0;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.contract-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border-radius: 50px;
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contract-status span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #10b981;
+}
+
+
+/* =========================
+   DICTAMEN
+========================= */
+
+.dictamen-box {
+    margin: 20px 24px;
+
+    padding: 18px;
+
+    display: flex;
+
+    gap: 15px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 13px;
+
+    background: #fafaff;
+}
+
+.dictamen-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.dictamen-label {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #8b5cf6;
+}
+
+.dictamen-box h5 {
+    margin: 4px 0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.dictamen-box p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DOCUMENTO
+========================= */
+
+.contract-document {
+    margin: 0 24px 24px;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.document-top {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    color: #9ca3af;
+
+    letter-spacing: 1px;
+}
+
+.document-title {
+    text-align: center;
+
+    padding: 30px 0;
+}
+
+.document-title h2 {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.document-title p {
+    margin: 5px 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+.document-section {
+    margin-bottom: 28px;
+}
+
+.document-section h6 {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #4f46e5;
+
+    margin-bottom: 12px;
+}
+
+.document-section p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #4b5563;
+}
+
+
+/* =========================
+   PARTES
+========================= */
+
+.parties-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.party-box {
+    padding: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+}
+
+.party-box span,
+.conditions-grid span {
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: #9ca3af;
+
+    margin-bottom: 5px;
+}
+
+.party-box strong {
+    font-size: 13px;
+
+    color: #111827;
+}
+
+
+/* =========================
+   CONDICIONES
+========================= */
+
+.conditions-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.conditions-grid > div {
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #f9fafb;
+}
+
+.conditions-grid strong {
+    font-size: 15px;
+}
+
+
+/* =========================
+   CLÁUSULAS
+========================= */
+
+.clauses-list {
+    padding-left: 20px;
+}
+
+.clauses-list li {
+    padding-left: 5px;
+
+    margin-bottom: 10px;
+
+    color: #4b5563;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CLÁUSULAS DINÁMICAS
+========================= */
+
+.dynamic-clause-empty {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border: 1px dashed #d1d5db;
+
+    border-radius: 10px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+.dynamic-clause-empty i {
+    font-size: 17px;
+}
+
+.dynamic-clause {
+    padding: 15px;
+
+    border-left: 3px solid #6366f1;
+
+    background: #f5f3ff;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #4b5563;
+}
+
+
+/* =========================
+   FIRMAS
+========================= */
+
+.signature-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    margin-top: 60px;
+}
+
+.signature-line {
+    padding-top: 10px;
+
+    border-top: 1px solid #9ca3af;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   ACCIONES
+========================= */
+
+.actions-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: #111827;
+
+    color: white;
+}
+
+.actions-card h5 {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.actions-card p {
+    margin: 4px 0 0;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+.btn-export {
+    background: white;
+
+    color: #111827;
+
+    border-radius: 9px;
+
+    padding: 10px 16px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.btn-export:hover {
+    background: #f3f4f6;
+
+    color: #111827;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .hub-header h1 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .custom-navbar {
+        height: auto;
+
+        padding: 12px 0;
+    }
+
+    .system-status {
+        display: none;
+    }
+
+    .hub-header h1 {
+        font-size: 24px;
+    }
+
+    .contract-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .contract-document {
+        margin: 0 12px 15px;
+
+        padding: 20px;
+    }
+
+    .parties-grid,
+    .conditions-grid,
+    .signature-section {
+        grid-template-columns: 1fr;
+    }
+
+    .signature-section {
+        gap: 40px;
+    }
+
+    .actions-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .btn-export {
+        width: 100%;
+    }
+
+}
