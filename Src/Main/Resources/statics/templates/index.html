@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hub de Simulación de Contratos</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+
+                <div class="brand-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                    <span class="brand-title">LegalHub</span>
+
+                    <small class="brand-subtitle">
+                        Simulación Contractual
+                    </small>
+                </div>
+
+            </a>
+
+            <div class="d-flex align-items-center gap-3">
+
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    Sistema activo
+                </span>
+
+                <button
+                    class="btn user-button"
+                    type="button">
+
+                    <i class="bi bi-person-circle"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="container-fluid px-4 py-4">
+
+        <!-- HEADER -->
+
+        <section class="hub-header mb-4">
+
+            <div class="header-badge">
+
+                <i class="bi bi-stars"></i>
+
+                Mediación Imparcial e Inteligente
+
+            </div>
+
+            <h1>
+                Hub de Simulación de Contratos
+            </h1>
+
+            <p>
+                Crea, analiza y simula diferentes escenarios contractuales
+                para anticipar posibles conflictos entre propietarios e
+                inquilinos.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             GRID PRINCIPAL
+        ========================== -->
+
+        <div class="row g-4">
+
+
+            <!-- =================================
+                 COLUMNA IZQUIERDA
+            ================================== -->
+
+            <aside class="col-lg-4">
+
+
+                <!-- =========================
+                     DATOS DEL CONTRATO
+                ========================== -->
+
+                <div class="custom-card mb-4">
+
+                    <div class="card-header-custom">
+
+                        <div class="card-icon">
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Datos del contrato
+                            </h5>
+
+                            <p>
+                                Ingresa la información principal
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-body-custom">
+
+                        <form id="contractForm">
+
+
+                            <!-- Propietario -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    class="form-label"
+                                    for="propietario">
+
+                                    Nombre del propietario
+
+                                </label>
+
+                                <div class="input-group custom-input">
+
+                                    <span class="input-group-text">
+
+                                        <i class="bi bi-person"></i>
+
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="propietario"
+                                        placeholder="Ej. Carlos Ramírez"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Inquilino -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    class="form-label"
+                                    for="inquilino">
+
+                                    Nombre del inquilino
+
+                                </label>
+
+                                <div class="input-group custom-input">
+
+                                    <span class="input-group-text">
+
+                                        <i class="bi bi-person"></i>
+
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inquilino"
+                                        placeholder="Ej. Juan Pérez"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+
+
+                                <!-- Monto -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label
+                                        class="form-label"
+                                        for="monto">
+
+                                        Alquiler mensual
+
+                                    </label>
+
+                                    <div class="input-group custom-input">
+
+                                        <span class="input-group-text">
+                                            $
+                                        </span>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="monto"
+                                            placeholder="800"
+                                            min="0"
+                                            step="0.01"
+                                            required>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Duración -->
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label
+                                        class="form-label"
+                                        for="duracion">
+
+                                        Duración
+
+                                    </label>
+
+                                    <div class="input-group custom-input">
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="duracion"
+                                            placeholder="12"
+                                            min="1"
+                                            required>
+
+                                        <span class="input-group-text">
+                                            meses
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Botón -->
+
+                            <button
+                                type="submit"
+                                class="btn btn-generate w-100">
+
+                                <i class="bi bi-file-earmark-plus"></i>
+
+                                Generar contrato
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     SIMULADOR
+                ========================== -->
+
+                <div class="custom-card mb-4">
+
+                    <div class="card-header-custom">
+
+                        <div class="card-icon simulator-icon">
+
+                            <i class="bi bi-cpu"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Simulador de escenarios
+                            </h5>
+
+                            <p>
+                                Analiza posibles conflictos
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-body-custom">
+
+                        <label
+                            class="form-label"
+                            for="scenarioSelect">
+
+                            Selecciona un escenario
+
+                        </label>
+
+
+                        <select
+                            class="form-select custom-select mb-3"
+                            id="scenarioSelect">
+
+                            <option value="">
+                                Seleccionar escenario...
+                            </option>
+
+                            <option value="salida">
+                                Salida anticipada en el mes 5
+                            </option>
+
+                            <option value="tuberia">
+                                Rotura de tubería
+                            </option>
+
+                            <option value="pago">
+                                Retraso de pago
+                            </option>
+
+                            <option value="mantenimiento">
+                                Daños por mantenimiento
+                            </option>
+
+                            <option value="renovacion">
+                                Solicitud de renovación
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            id="simulateBtn"
+                            type="button"
+                            class="btn btn-simulate w-100">
+
+                            <i class="bi bi-play-circle"></i>
+
+                            Simular Escenario Legal
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     EVIDENCIAS
+                ========================== -->
+
+                <div class="custom-card">
+
+                    <div class="card-header-custom">
+
+                        <div class="card-icon evidence-icon">
+
+                            <i class="bi bi-images"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Evidencias fotográficas
+                            </h5>
+
+                            <p>
+                                Adjunta pruebas del caso
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-body-custom">
+
+
+                        <!-- DROPZONE -->
+
+                        <div
+                            class="dropzone"
+                            id="dropzone">
+
+                            <i class="bi bi-cloud-arrow-up"></i>
+
+                            <h6>
+                                Arrastra tus imágenes aquí
+                            </h6>
+
+                            <p>
+                                o haz clic para seleccionar
+                            </p>
+
+                            <input
+                                type="file"
+                                id="imageInput"
+                                accept="image/*"
+                                multiple
+                                hidden>
+
+                        </div>
+
+
+                        <!-- GALERÍA -->
+
+                        <div
+                            class="evidence-gallery"
+                            id="evidenceGallery">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================
+                 COLUMNA DERECHA
+            ================================== -->
+
+            <section class="col-lg-8">
+
+
+                <!-- =========================
+                     CONTRATO GENERADO
+                ========================== -->
+
+                <div class="custom-card mb-4">
+
+
+                    <!-- HEADER DEL CONTRATO -->
+
+                    <div class="contract-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                DOCUMENTO DIGITAL
+                            </span>
+
+                            <h3>
+                                Contrato Generado
+                            </h3>
+
+                        </div>
+
+
+                        <span class="contract-status">
+
+                            <span></span>
+
+                            Borrador Equilibrado
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- =========================
+                         DICTAMEN
+                    ========================== -->
+
+                    <div
+                        class="dictamen-box"
+                        id="dictamenBox">
+
+                        <div class="dictamen-icon">
+
+                            <i class="bi bi-robot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span class="dictamen-label">
+                                DICTAMEN DEL SIMULADOR
+                            </span>
+
+                            <h5 id="dictamenTitle">
+                                Esperando simulación
+                            </h5>
+
+                            <p id="dictamenText">
+
+                                Selecciona un escenario para obtener
+                                un análisis legal del posible conflicto.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         VISOR CONTRATO
+                    ========================== -->
+
+                    <div class="contract-document">
+
+
+                        <!-- PARTE SUPERIOR -->
+
+                        <div class="document-top">
+
+                            <span>
+                                CONTRATO DE ARRENDAMIENTO
+                            </span>
+
+                            <span>
+                                #CON-2026-001
+                            </span>
+
+                        </div>
+
+
+                        <!-- TÍTULO -->
+
+                        <div class="document-title">
+
+                            <h2>
+                                CONTRATO DE ARRENDAMIENTO
+                            </h2>
+
+                            <p>
+                                Documento de simulación contractual
+                            </p>
+
+                        </div>
+
+
+                        <!-- =========================
+                             PARTES
+                        ========================== -->
+
+                        <div class="document-section">
+
+                            <h6>
+
+                                <i class="bi bi-people"></i>
+
+                                IDENTIFICACIÓN DE LAS PARTES
+
+                            </h6>
+
+                            <p>
+                                En el presente contrato participan:
+                            </p>
+
+
+                            <div class="parties-grid">
+
+
+                                <!-- PROPIETARIO -->
+
+                                <div class="party-box">
+
+                                    <span>
+                                        PROPIETARIO
+                                    </span>
+
+                                    <strong id="contractOwner">
+                                        Pendiente
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- INQUILINO -->
+
+                                <div class="party-box">
+
+                                    <span>
+                                        INQUILINO
+                                    </span>
+
+                                    <strong id="contractTenant">
+                                        Pendiente
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             CONDICIONES
+                        ========================== -->
+
+                        <div class="document-section">
+
+                            <h6>
+
+                                <i class="bi bi-cash-stack"></i>
+
+                                CONDICIONES ECONÓMICAS
+
+                            </h6>
+
+
+                            <div class="conditions-grid">
+
+
+                                <!-- ALQUILER -->
+
+                                <div>
+
+                                    <span>
+                                        ALQUILER MENSUAL
+                                    </span>
+
+                                    <strong id="contractAmount">
+                                        $ 0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- DURACIÓN -->
+
+                                <div>
+
+                                    <span>
+                                        DURACIÓN
+                                    </span>
+
+                                    <strong id="contractDuration">
+                                        0 meses
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             CLÁUSULAS PRINCIPALES
+                        ========================== -->
+
+                        <div class="document-section">
+
+                            <h6>
+
+                                <i class="bi bi-list-check"></i>
+
+                                CLÁUSULAS PRINCIPALES
+
+                            </h6>
+
+
+                            <ol class="clauses-list">
+
+                                <li>
+                                    El inquilino se compromete a realizar
+                                    el pago mensual acordado dentro del
+                                    plazo establecido.
+                                </li>
+
+                                <li>
+                                    El propietario deberá garantizar
+                                    condiciones adecuadas de habitabilidad.
+                                </li>
+
+                                <li>
+                                    Las reparaciones estructurales serán
+                                    responsabilidad del propietario,
+                                    salvo daños ocasionados por negligencia
+                                    del inquilino.
+                                </li>
+
+                                <li>
+                                    Cualquier modificación del contrato
+                                    deberá ser acordada por ambas partes.
+                                </li>
+
+                                <li>
+                                    Los retrasos en los pagos podrán generar
+                                    las consecuencias establecidas en el
+                                    contrato.
+                                </li>
+
+                            </ol>
+
+                        </div>
+
+
+                        <!-- =========================
+                             CLÁUSULAS DINÁMICAS
+                        ========================== -->
+
+                        <div
+                            class="document-section additional-clauses"
+                            id="additionalClauses">
+
+                            <h6>
+
+                                <i class="bi bi-stars"></i>
+
+                                CLÁUSULAS GENERADAS POR SIMULACIÓN
+
+                            </h6>
+
+
+                            <div
+                                id="dynamicClause"
+                                class="dynamic-clause-empty">
+
+                                <i class="bi bi-hourglass-split"></i>
+
+                                <span>
+
+                                    Las cláusulas adicionales aparecerán
+                                    después de ejecutar una simulación.
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             FIRMAS
+                        ========================== -->
+
+                        <div class="signature-section">
+
+
+                            <div class="signature-line">
+
+                                <span>
+                                    Firma del propietario
+                                </span>
+
+                            </div>
+
+
+                            <div class="signature-line">
+
+                                <span>
+                                    Firma del inquilino
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     ACCIONES
+                ========================== -->
+
+                <div class="actions-card">
+
+                    <div>
+
+                        <h5>
+                            ¿Contrato listo?
+                        </h5>
+
+                        <p>
+                            Exporta el documento con las condiciones
+                            y cláusulas generadas.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="exportBtn"
+                        type="button"
+                        class="btn btn-export">
+
+                        <i class="bi bi-download"></i>
+
+                        Exportar Contrato Final
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =========================
+         JAVASCRIPT PROPIO
+    ========================== -->
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
